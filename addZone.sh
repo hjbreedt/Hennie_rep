@@ -5,7 +5,7 @@
 # This script will add new zone files.
 # You could add the domains to the domains.txt file.
 # eg. for i in `cat domains.txt`;do ./addZone.sh $i Clientname;done;service named restart
-# or eg. ./addZone.sh sevenc.co.za sevenc 2017-07-10
+# or eg. ./addZone.sh example.co.za clientname 2017-07-10
 # If it's a new site, the 3rd argument is not nesessary.
 
 DB_USER='root'
@@ -55,18 +55,18 @@ else
 ;Done by Hennie Breedt on $(date +"%Y-%m-%d") 	Client: $2
 ;
 \$TTL 300
-@                       IN      SOA             buddleja.sevenc.co.za.  dnsadmin.sevenc.co.za. (
+@                       IN      SOA             ns1.example.co.za.  dnsadmin.example.co.za. (
 						2005080122;
 						28800;
 						7200;
 						604800;
 						86400;
 )
-@                       IN      NS              buddleja.sevenc.co.za.
-@                       IN      NS              acacia.sevenc.co.za.
+@                       IN      NS              ns1.example.co.za.
+@                       IN      NS              ns2.example.co.za.
 @                       IN      MX 10   mail.$DOMAINNAME.
 @                       IN      MX 20   mail2.$DOMAINNAME.
-;@                       IN      TXT     'v=spf1 include:spf.sevenc.co.za mx a ptr a:linexchange.$DOMAINNAME.ipactive.biz -all'
+;@                       IN      TXT     'v=spf1 include:spf.example.co.za mx a ptr a:linexchange.$DOMAINNAME.ipactive.biz -all'
 @                       IN      TXT             \"CLIENT: $2\"
 @                       IN      A               154.0.173.94
 localhost	        IN      A               127.0.0.1
