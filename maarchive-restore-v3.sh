@@ -29,7 +29,7 @@ USERGRP=`id -ng $USER`
 RESTOREDIN="restored-inbox-`/bin/date +'%d%b%y'`"
 RESTOREDOUT="restored-sent-`/bin/date +'%d%b%y'`"
 MB2MD="/usr/local/pkmailbox/bin/mb2md-3.20.pl"
-WORKINGDIR="/home/sevenc/maarchive/$USER"
+WORKINGDIR="/home/user/maarchive/$USER"
 MAILDIR="/home/$USER/Maildir"
 mkdir -p /tmp/$USER/inbox
 mkdir -p /tmp/$USER/sent
