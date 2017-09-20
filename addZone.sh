@@ -8,13 +8,12 @@
 # or eg. ./addZone.sh example.co.za clientname 2017-07-10
 # If it's a new site, the 3rd argument is not nesessary.
 
-DB_USER='root'
-DB_PASSWD='obvi0usweb'
-DB_NAME='domains'
+DB_USER='pietie'
+DB_PASSWD='password'
+DB_NAME='dbname'
 
 ID='NULL'
 NAMEDCONF=/etc/named.conf
-#NAMEDCONF=/etc/named-test.conf
 WORKDIR=/etc/named
 DOMAINNAME=$1
 CLIENT=$2
