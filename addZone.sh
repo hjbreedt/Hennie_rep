@@ -8,12 +8,10 @@
 # or eg. ./addZone.sh sevenc.co.za sevenc 2017-07-10
 # If it's a new site, the 3rd argument is not nesessary.
 
-DB_USER='dnsadmin'
-#DB_USER='root'
-DB_PASSWD='lee4an1h'
-#DB_PASSWD='obvi0usweb'
+DB_USER='root'
+DB_PASSWD='obvi0usweb'
 DB_NAME='domains'
-#DB_NAME='domains_test'
+
 ID='NULL'
 NAMEDCONF=/etc/named.conf
 #NAMEDCONF=/etc/named-test.conf
