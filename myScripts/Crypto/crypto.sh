@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if curl -s http://myip.sevenc.co.za/ransomware.txt > /dev/null; then
+if curl -s http://myip.example.co.za/ransomware.txt > /dev/null; then
         echo "Curl suceeding... continuing with ransomware check."
-                for EXT in `curl -s http://myip.sevenc.co.za/ransomware.txt`;
+                for EXT in `curl -s http://myip.example.co.za/ransomware.txt`;
                         do
                                 echo "$(date) - checking $EXT"
                                 LOCKY=$( find /home/samba -type f -iname $EXT | wc -l )
